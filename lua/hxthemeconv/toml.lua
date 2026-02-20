@@ -35,7 +35,7 @@ local function encode_value_table(val)
   return '{'..table.concat(entries,',')..'}'
 end
 
-local function encode_value(val)
+function encode_value(val)
   if type(val)=='table' then
     return encode_value_table(val)
   elseif type(val)=='number' then
